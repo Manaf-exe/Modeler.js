@@ -1,0 +1,49 @@
+{
+    "name": "modeler.js",
+    "version": "1.0.0",
+    "description": "An AI-driven CLI tool that lets you build freely",
+    "type": "module",
+    "main": "compiler.mjs",
+    "bin": {
+        "modeler.js": "compiler.mjs",
+        "modeler": "compiler.mjs"
+      },
+    "scripts": {
+        "start": "node compiler.mjs --help",
+        "test": "node compiler.mjs"
+      },
+    "keywords": [
+        "cli",
+        "ai",
+        "build-tools",
+        "developer-tools",
+        "automation",
+        "code-generator"
+      ],
+    "author": "Muhammad Manaf Sadiq",
+    "license": "MIT",
+    "homepage": "https://github.com/Manaf-exe/Modeler.js#readme",
+    "bugs": {
+        "url": "https://github.com/Manaf-exe/Modeler.js/issues"
+      },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Manaf-exe/Modeler.js.git"
+      },
+    "files": [
+        "compiler.mjs",
+        "README.md"
+      ],
+    "engines": {
+        "node": ">=18.0.0"
+      }
+}
+
+  }
+  ]
+  }
+  }
+  ]
+  }
+  }
+}
