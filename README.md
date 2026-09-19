@@ -8,8 +8,8 @@ Getting Started
 download via GitHub.
  * Then create a new input file in any format.
  * Then you have two options:
-   * Just run it using node compiler.mjs --yourFilePath. It will guide you through the process and compile.
-   * Or: Run it with a reference tag file: node compiler.mjs --yourFilePath +tag.file*1/2/3/4/5. Note: 5 is the maximum number of reference files.
+   * Just run it using `node compiler.mjs --yourFilePath`. It will guide you through the process and compile.
+   * Or: Run it with a reference tag file: `node compiler.mjs --yourFilePath +tag.file*1/2/3/4/5`. Note: 5 is the maximum number of reference files.
 > Reminder: Don't forget to add `--` before your file name.
 > 
 File Structure
