@@ -1,23 +1,123 @@
-Modeler.js is a CLI tool that lets you build applications or programs easily with just an input file. You can also tag references.
-Dependencies: `fs-extra`, `readline-sync`
-It's simple and likely effective for your workflow. You might have a question:
-> "Why use this random CLI tool when I have complex CLI agents?"
-> 
-The answer is very simple: it has a completely different goal. It just gets an input and gives you the output, that's it! Really simple.
-Getting Started
-download via GitHub.
- * Then create a new input file in any format.
- * Then you have two options:
-   * Just run it using `node compiler.mjs --yourFilePath`. It will guide you through the process and compile.
-   * Or: Run it with a reference tag file: `node compiler.mjs --yourFilePath +tag.file*1/2/3/4/5`. Note: 5 is the maximum number of reference files.
-> Reminder: Don't forget to add `--` before your file name.
-> 
-File Structure
-Model-Role: [Your Model Role]
-Core-Idea: [Your Core Idea]
-Output-Lang: [Output Language]
+# Modeler.js
+
+**Modeler.js** is a lightweight CLI compiler that transpiles structured **ModelScript  files** directly into executable code using OpenAI-compatible API providers.
+
+---
+
+## 📦 Dependencies
+
+Install the required npm packages before running:
+
+```bash
+npm install readline-sync fs-extra
+```
+
+> **Note:** Credentials and project secrets are initialized automatically on your first run.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Create a ModelScript File
+
+Define your program logic in an input file (for example, `app.ai` or `app.txt`) using the standard ModelScript structure:
+
+```text
+Model-Role: Senior Software Engineer and Chief Designer
+Core-Idea: Extremely Modern Abstract Calculator
+Output-lang: HTML
 Main-Details:
+A calculator written in HTML with integrated CSS and JavaScript
+featuring comprehensive error handling.
+```
 
-Your main logic starts here.
+---
 
-Very simple! You can tag your HTML file, database, or anything else in the CLI!
+### 2. Basic Compilation
+
+To compile your file, run `compiler.mjs` and pass your file path prefixed with `--`:
+
+```bash
+node compiler.mjs --app.txt
+```
+
+During execution, the CLI will interactively prompt you for:
+
+* **API code model name** — e.g. `gpt-4o`, `claude-3-5-sonnet`, `deepseek-coder`
+* **Saved filename** — e.g. `index.html`
+
+---
+
+## 🏷️ Referencing External Files (`+tag.file*N`)
+
+You can supply up to **5 reference files**—such as database schemas, HTML templates, configuration files, or existing scripts—to provide additional context during generation.
+
+Example:
+
+```bash
+node compiler.mjs --app.txt +tag.file*3
+```
+
+Append `+tag.file*N`, where `N` is the exact number of reference files:
+
+```text
++tag.file*1
++tag.file*2
++tag.file*3
++tag.file*4
++tag.file*5
+```
+
+The CLI will then prompt you sequentially to enter the file path for each reference file.
+
+---
+
+## ⚙️ Configuration & Secrets
+
+### Initial Setup
+
+If credentials are missing, running any compilation command will automatically prompt you to enter:
+
+* **API Key**
+* **Provider Endpoint URL**
+
+### Credentials Storage
+
+Configured credentials are saved locally at:
+
+```text
+./secrets/top/secret/api.txt
+./secrets/top/secret/url.txt
+```
+
+### 🔐 Git Safety
+
+During setup, the CLI automatically appends:
+
+```text
+secrets/
+```
+
+to your `.gitignore` file to help prevent accidentally committing credentials.
+
+---
+
+## 📁 Example Project
+
+A minimal Modeler.js project might look like:
+
+```text
+project/
+├── compiler.mjs
+├── app.txt
+├── index.html
+├── package.json
+├── .gitignore
+└── secrets/
+    └── top/
+        └── secret/
+            ├── api.txt
+            └── url.txt
+```
+
+> **Tip:** Never commit the `secrets/` directory or expose your API key publicly.
