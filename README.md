@@ -1,3 +1,5 @@
+[logo](https://raw.githubusercontent.com/Manaf-exe/Ultimate-Codebase/0b729f05c0324c8aa8e57a18f96737ac44ecec81/Modeler_20260919_205818_0000.png)
+
 # Modeler.js
 
 **Modeler.js** is a lightweight CLI compiler that transpiles structured **ModelScript  files** directly into executable code using OpenAI-compatible API providers.
