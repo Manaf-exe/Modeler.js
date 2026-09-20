@@ -20,9 +20,9 @@ npm install readline-sync fs-extra
 
 ### 1. Create a ModelScript File
 
-Define your program logic in an input file (for example, `app.ai` or `app.txt`) using the standard ModelScript structure:
+Define your program logic in an input file (for example `app.txt`) using the standard ModelScript structure:
 
-```text
+```ModelScript
 Model-Role: Senior Software Engineer and Chief Designer
 Core-Idea: Extremely Modern Abstract Calculator
 Output-lang: HTML
@@ -43,7 +43,7 @@ node compiler.mjs --app.txt
 
 During execution, the CLI will interactively prompt you for:
 
-* **API code model name** — e.g. `gpt-4o`, `claude-3-5-sonnet`, `deepseek-coder`
+* **API code model name** — e.g. `gpt-4o`, `claude-3-5-sonnet`, `deepseek-coder` (Only select code models)
 * **Saved filename** — e.g. `index.html`
 
 ---
