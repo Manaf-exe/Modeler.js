@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Manaf-exe/Ultimate-Codebase/0b729f05c0324c8aa8e57a18f96737ac44ecec81/Modeler_20260919_205818_0000.png" style="width: 100%;">
+<img src="https://raw.githubusercontent.com/Manaf-exe/Ultimate-Codebase/0b729f05c0324c8aa8e57a18f96737ac44ecec81/Modeler_20260919_205818_0000.png" style="width: 400px;">
 
 # Modeler.js
 
